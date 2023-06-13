@@ -1,0 +1,78 @@
+@import "../variables/index";
+.container{
+    &-home{
+        display: grid;
+        grid-template-areas: "banner" "subTitle" "boxContainer";
+        .subTitle{
+            text-align: left;
+            margin-left: 150px;
+        }
+    }
+    &-movie{
+        &-view{
+            padding-left: 150px;
+            padding-right: 150px;
+            padding-top: 50px;
+            display: grid;
+            grid-template-areas:"title title" 
+                                "img options"
+                                "info options";
+            grid-template-columns: 500px auto;
+            grid-template-rows: 50px auto auto;
+
+            h1{
+                grid-area: title;
+                text-align: start;
+            }
+
+            img{
+                grid-area: img;
+                width: 100%;
+            }
+
+            &-info{
+                grid-area: info;
+            }
+
+            &-option{
+                grid-area: options;
+                display: grid;
+                grid-template-areas: "sub-title"
+                                    "days";
+                grid-template-rows: 24px auto;
+                width: 100%;
+                padding: 15px;
+                justify-content: start;
+                h3{
+                    grid-area: sub-title;
+                    text-align: start;
+                }
+                &-radio{
+                    display: flex;
+                    margin-top: 15px;
+                    label{
+                        background-color: $color_primary;
+                        color: $color_secundary;
+                        font-weight: bold;
+                        padding-left: 16px;
+                        padding-right: 16px;
+                        padding-top: 8px;
+                        padding-bottom: 8px;
+                        border-radius: 5px;
+                        margin: 8px;
+                        cursor: pointer;
+                        transition: all 500ms;
+                        &:hover{
+                            background-color: $color_secundary;
+                            color: white;
+                        }
+                    }
+                    input[type=radio]{
+                        display: none;
+                    }
+                }
+            }
+
+        }
+    }
+}

@@ -1,1 +1,6 @@
-@import "./src/scss/general/general";
+@import "general/general";
+@import "components/NavBar/index";
+@import "components/Box/index";
+@import "components/Buttons/index";
+@import "containers/index";
+@import "components/Banner/index";
